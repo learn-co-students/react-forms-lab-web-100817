@@ -6,6 +6,7 @@ import TwitterMessage from './components/TwitterMessage';
 import PoemWriter from './components/PoemWriter';
 
 function login({ username, password }) {
+  debugger;
   console.log(`Logging in ${username} with password ${password}`);
 }
 
