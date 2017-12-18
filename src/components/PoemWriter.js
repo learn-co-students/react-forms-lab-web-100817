@@ -4,7 +4,18 @@ class PoemWriter extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      poem: ''
+    };
+  }
+
+  handleChange = (event) =>{
+    this.setState({poem:event.target.value})
+  }
+
+  validatePoem = event =>{
+    let poem = event.target.value
+    poem = poem.trim
   }
 
   render() {
@@ -13,6 +24,9 @@ class PoemWriter extends React.Component {
         <textarea
           rows="3"
           cols="60"
+          value={this.state.poem}
+          onChange={this.handleChange}
+          name="poem"
         />
         <div
           id="poem-validation-error"
